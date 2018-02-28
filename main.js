@@ -19,3 +19,12 @@ var makeBook=function (bookTitle,geners,author,quote,bookImage){
 	}
 	addBdooks(book)
 }
+
+var search=function(input){
+	return streams.books.filter(function (bookObj){
+		
+// return (input.toLowerCase().indexOf(bookObj.bookTitle.toLowerCase()) > -1) || (input.toLowerCase().indexOf(bookObj.genres.toLowerCase()) > -1 ) || (input.toLowerCase().indexOf(bookObj.author.toLowerCase()) > -1 )
+	return (bookObj.bookTitle.toLowerCase()).search(input.toLowerCase())>-1 || (bookObj.genres.toLowerCase()).search(input.toLowerCase())>-1 || (bookObj.author.toLowerCase()).search(input.toLowerCase())>-1
+
+	})
+}

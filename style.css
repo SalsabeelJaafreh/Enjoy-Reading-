@@ -1,6 +1,7 @@
 body{
 	
 	 background-color: #fdf2d3;
+	 color:#734021
 }
 .centered {
     position: absolute;
@@ -8,19 +9,25 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     color:#fdf2d3;
-    font-family: fantasy;
+    font-family: cursive;
 }
 .row{
 	margin-bottom:5px; 
 	margin-top:5px;
 	margin-left: 5px;
 	margin-right:5px;
-	font-family: fantasy;
-	border:solid 2px;
+	font-family: cursive;
+	
 }
 
 .marg{
 	margin-left: 3px;
 	margin-right:3px;
 	
+}
+.divbooks{
+	border:solid 1px #734021;
+}
+.hidden{
+	display: none;
 }
