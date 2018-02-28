@@ -1,0 +1,26 @@
+body{
+	
+	 background-color: #fdf2d3;
+}
+.centered {
+    position: absolute;
+     top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#fdf2d3;
+    font-family: fantasy;
+}
+.row{
+	margin-bottom:5px; 
+	margin-top:5px;
+	margin-left: 5px;
+	margin-right:5px;
+	font-family: fantasy;
+	border:solid 2px;
+}
+
+.marg{
+	margin-left: 3px;
+	margin-right:3px;
+	
+}
