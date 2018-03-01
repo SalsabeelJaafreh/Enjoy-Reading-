@@ -4,6 +4,12 @@ function addDivBook(books,divName){
  divName.append("");
         while(index >= 0){
           var book = books[index];
+          if(books[index].amazonLink!==""){
+            var link=$('<a href="'+ books[index].amazonLink + '" target="_blank"></a>')
+          }else{
+            var link=$('<a href="#" target="_blank"></a>')
+          }
+          
           var secRow=$('<div class="row divbooks"></div>');
           var thirdCol=$('<div class="col-xs-5 marg"></div>');
           var fifthCol=$('<div class="col-xs-7 marg"></div>');
@@ -13,7 +19,8 @@ function addDivBook(books,divName){
           thirdCol.append(image);
           secRow.append(thirdCol);
           secRow.append(fifthCol);
-          divName.append(secRow);
+          link.append(secRow)
+          divName.append(link);
           index -= 1;
         }
 }
@@ -46,7 +53,9 @@ $( "#searchTxt" ).keyup(function() {
          if(bookArr.length>0){
           $showBooks.html("")
           addDivBook(bookArr,$showBooks )        
-          } 
+          }else{
+            $showBooks.html("<h2>Sorry! there is no matched books</h2>")
+          }
                
 });
 
